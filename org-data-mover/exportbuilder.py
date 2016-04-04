@@ -70,12 +70,6 @@ class ExportBuilder(object):
 
     # endregion
 
-# if __name__ == "__main__":
-#     query_builder = QueryBuilder('testcraft-dev', '1000612', 'mongodb://localhost:27017/')
-#     query_builder.set_projects()
-#     query_builder.set_versions()
-#     exportbuilder = ExportBuilder(query_builder)
-#     exportbuilder.build_script('testcraft')
 
 def main(argv=[]):
 

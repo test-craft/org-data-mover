@@ -9,9 +9,8 @@ from querybuilder import QueryBuilder
 class ImportBuilder(object):
 
     # C'tor
-    def __init__(self, query_builder):
+    def __init__(self):
         logging.debug("Constructing ImportBuilder")
-        self.__query_builder = query_builder
         self.__commands = []
 
     # Destructor
@@ -63,12 +62,7 @@ def main(argv=[]):
     logger.configure(__file__)
     logging.info("starting importbuilder")
     db_name = argv[1]
-    org_id = argv[2]
-    mongo_uri = argv[3]
-    query_builder = QueryBuilder(db_name, org_id, mongo_uri)
-    query_builder.set_projects()
-    query_builder.set_versions()
-    importbuilder = ImportBuilder(query_builder)
+    importbuilder = ImportBuilder()
     importbuilder.build_script(db_name)
 
 if __name__ == "__main__":
