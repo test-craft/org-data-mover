@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+output
+*.log
+delete_org.sh
+export_org.sh
+import_org.sh
+*.out
+*.sh
+delete_org.js
